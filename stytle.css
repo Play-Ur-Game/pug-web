@@ -1,0 +1,1593 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:400");
+
+
+@font-face {
+  font-family: "Pretendard-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6207938bad4cbb51c8d150e8/fonts/pretendard-black.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6122f3f935181493bb5c6c35/fonts/pretendard-semibold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/652c3450456268e27eebc9fd/fonts/gothica1-bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/5f06a5517739f30d3a8fc967/fonts/pretendard-bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/5f06a5517739f30d3a8fc967/fonts/pretendard-regular.otf') format("opentype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66c98906fe52b1b58b395ea5.66c98907fe52b1b58b395ea8.liyZghm.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --cgray-systemcgary900: #1f2128;
+  --cgray-systemcgray100: #f2f3f7;
+  --cgray-systemcgray300: #d6d7e1;
+  --cgray-systemcgray400: #c4c7d4;
+  --cgray-systemcgray50: #f7f8f9;
+  --cgray-systemcgray500: #afb2c0;
+  --cgray-systemcgray600: #8a8d9e;
+  --cgray-systemcgray700: #5b5f70;
+  --cgray-systemcgray800: #31343f;
+  --cgray-systemgray800: #31343f;
+  --cgray-systempure: #ffffff;
+  --graycgray200: #e7e8ed;
+  --graycgray900: #1f2128;
+  --graygray300: #d6d7e1;
+  --graygray500: #afb2c0;
+  --graygray700: #5b5f70;
+  --graypure: #ffffff;
+  --manatee: #8a8fa7;
+  --primary100: #f2f3ff;
+  --sementicerror: #ef3f55;
+  --tan-hide: #f5935c;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 26px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-pretendard-black: "Pretendard-Black", Helvetica;
+  --font-family-pretendard-bold: "Pretendard-Bold", Helvetica;
+  --font-family-pretendard-medium: "Pretendard-Medium", Helvetica;
+  --font-family-pretendard-regular: "Pretendard-Regular", Helvetica;
+  --font-family-pretendard-semibold: "Pretendard-SemiBold", Helvetica;
+}
+.boldh1 {
+  font-family: var(--font-family-pretendard-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.semiboldsh3 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.semiboldsh5 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph5 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph6 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.regularparagraphr5 {
+  font-family: var(--font-family-pretendard-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.inter-normal-manatee-16px {
+  color: var(--manatee);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - xl */
+
+.xl {
+  background-color: var(--cgray-systemcgray100);
+  height: 1246px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1536px;
+}
+
+.xl .gnb-KvGp54 {
+  align-items: center;
+  background-color: var(--cgray-systempure);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--graycgray200);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  justify-content: space-between;
+  left: -0px;
+  padding: 12px 0px;
+  position: absolute;
+  top: 0px;
+  width: 1536px;
+}
+
+.xl .logo-area-NQ5Gx7 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  padding: 0px 0px 0px 20px;
+  position: relative;
+  width: 100px;
+}
+
+.xl .title-6C19U2 {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-pretendard-black);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .x1depth-NQ5Gx7 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.xl .x1depth-ifs3ju {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .x1depth-cr9q6Q {
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .frame-427319775-NQ5Gx7 {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 36px;
+  justify-content: space-around;
+  padding: 0px 20px 0px 0px;
+  position: relative;
+  width: 100px;
+}
+
+.xl .button-outline-zY9ZBu {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  margin-bottom: -2.00px;
+  margin-top: -2.00px;
+}
+
+.xl .text-label-Doi5Nc {
+  line-height: 20px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .event-count-NQ5Gx7 {
+  align-items: center;
+  background-color: var(--sementicerror);
+  border-radius: 500px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  left: 827px;
+  padding: 2px 6px;
+  position: absolute;
+  top: 14px;
+}
+
+.xl .x3-xBBPxD {
+  background-color: transparent;
+  color: var(--cgray-systempure);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .container-margin-KvGp54 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 168px;
+  padding: 24px 16px 40px;
+  position: absolute;
+  top: 64px;
+  width: 1200px;
+}
+
+.xl .frame-427319774-Y6NWR5 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.xl .text_label-YQIRdI {
+  color: var(--cgray-systemcgray800);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.xl .frame-1261156993-Y6NWR5 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427319755-e2cFD2 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+}
+
+.xl .label-state-xffVNX {
+  background-color: var(--cgray-systempure);
+  border-color: var(--cgray-systemcgray400);
+  padding: 10px 18px 10px 12px;
+}
+
+.xl .refresh-BvRE2i {
+  position: relative;
+}
+
+.xl .refresh-G9fVUa {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.xl .text-BvRE2i {
+  color: var(--cgray-systemcgray700);
+}
+
+.xl .label-state-WMMTQx {
+  background-color: var(--primary100);
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(106.00000128149986, 112.000000923872, 247.00000047683716), rgb(61.00000016391277, 88.00000235438347, 209.00000274181366)) 1;
+  padding: 10px 12px 10px 18px;
+}
+
+.xl .text-Q3j45F {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
+}
+
+.xl .arrow_drop_down-Q3j45F {
+  position: relative;
+}
+
+.xl .arrow_drop_down-xxGDBI {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.xl .label-state-OMNLQM {
+  background-color: var(--primary100);
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(106.00000128149986, 112.000000923872, 247.00000047683716), rgb(61.00000016391277, 88.00000235438347, 209.00000274181366)) 1;
+  padding: 10px 12px 10px 18px;
+}
+
+.xl .text-JtMqe4 {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
+}
+
+.xl .arrow_drop_down-JtMqe4 {
+  position: relative;
+}
+
+.xl .arrow_drop_down-NbFBwy {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.xl .frame-427319771-zVIbnC {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427318201-kYjSKX {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-peIQyj {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-HtnN41 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316.svg);
+}
+
+.xl .frame-1261156991-ZwemIx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.xl .text_label-epnssk {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-epnssk {
+  color: var(--cgray-systemcgray600);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.xl .text_label-lzhaV7 {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-xftWoe {
+  color: var(--cgray-systemcgray700);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .button-outline-KLCg4N {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-Kg47fn {
+  flex: 1;
+  line-height: 20px;
+  margin-top: -1.00px;
+}
+
+.xl .frame-427319679-wXiEvm {
+  box-shadow: 4px 4px 30px #6a6f7233;
+}
+
+.xl .frame-427318201-6rO0xr {
+  background-color: transparent;
+}
+
+.xl .frame-427318202-R65kN6 {
+  background-color: var(--cgray-systemcgray50);
+}
+
+.xl .frame-427319316-KCCEul {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-1.svg);
+}
+
+.xl .text_label-DoK1mf {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-DoK1mf {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-Y3ejLl {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-ezkPlS {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-S5xJKd {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-wVojKu {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .cursors-KCCEul {
+  left: 338px;
+  top: 205px;
+}
+
+.xl .frame-427318201-is7xjU {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-b8Mf6x {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-63Bsv7 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-2.svg);
+}
+
+.xl .text_label-7hkP7C {
+  color: var(--cgray-systemcgary900);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-7hkP7C {
+  color: var(--cgray-systemcgray600);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.xl .text_label-i0YxTv {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-zRqxjY {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.xl .frame-427319150-XZrTNU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 101px;
+}
+
+.xl .button-outline-hW2WIc {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-frtbBt {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427319772-zVIbnC {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 16px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427318201-l6jMsm {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-gTouiX {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-j4kEfp {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-3.svg);
+}
+
+.xl .text_label-nj104a {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-nj104a {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-FGAKjD {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-Qmtcf0 {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-p2E0rP {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-KM8SGm {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427318201-OxUMfx {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-OY3r6z {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-L6J3Ly {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-4.svg);
+}
+
+.xl .text_label-ZjYno7 {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-ZjYno7 {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-1fW0z8 {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-zT7SUZ {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-tRVH1c {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-Cih2kk {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427318201-w0Wbsj {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-mxcsOq {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-z8wFjk {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-5.svg);
+}
+
+.xl .text_label-joJcDo {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-joJcDo {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-RotSNY {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-XmbfOK {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-wUFg5v {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-yW7o7R {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427319773-zVIbnC {
+  padding: 16px 0px 0px;
+}
+
+.xl .frame-427318201-FBtZnX {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-aY8g5h {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-5TGM83 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-6.svg);
+}
+
+.xl .text_label-wcE55Q {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-wcE55Q {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-Obt6Lp {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-vw9lfX {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-FGbHtm {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-ik1sOI {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427318201-AbdFfM {
+  background-color: var(--tan-hide);
+}
+
+.xl .frame-427318202-42EWDa {
+  background-color: var(--cgray-systempure);
+}
+
+.xl .frame-427319316-Gx7xoh {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-7.svg);
+}
+
+.xl .text_label-JubmAA {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-JubmAA {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-VF4eZn {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-EMu6XG {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-ALAZmE {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-AucRF6 {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .frame-427319680-xmwqoa {
+  box-shadow: 4px 4px 30px #6a6f7233;
+}
+
+.xl .frame-427318201-RfplTk {
+  background-color: transparent;
+}
+
+.xl .frame-427318202-29JAFE {
+  background-color: var(--cgray-systemcgray50);
+}
+
+.xl .frame-427319316-dZfFdz {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-8.svg);
+}
+
+.xl .text_label-xk1q7a {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.xl .x26-xk1q7a {
+  letter-spacing: 0.00px;
+  line-height: normal;
+}
+
+.xl .text_label-DFQNW6 {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.xl .text_label-liNWNw {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.xl .button-outline-JWsNRM {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(23.770903162658215, 52.20672480762005, 179.64136451482773) 0%, rgb(90.51072522997856, 96.90413296222687, 240.75585633516312) 100%);
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  width: 101px;
+}
+
+.xl .text-label-h3xSxJ {
+  flex: 1;
+  line-height: 16px;
+}
+
+.xl .cursors-dZfFdz {
+  left: 280px;
+  top: 192px;
+}
+
+.xl .dropdown-e2cFD2 {
+  align-items: flex-start;
+  background-color: var(--cgray-systempure);
+  border: 1px solid;
+  border-color: var(--graycgray200);
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px #00000026;
+  display: flex;
+  left: 112px;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  width: 151px;
+}
+
+.xl .frame-2851-HnCDUo {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 180px;
+  padding: 4px 0px;
+  position: relative;
+}
+
+.xl .frame-2835-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--primary100);
+  display: flex;
+  flex: 0 0 auto;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .text_label-lBUkTy {
+  color: var(--cgray-systemcgary900);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.xl .frame-2840-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--cgray-systempure);
+  display: flex;
+  flex: 0 0 auto;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .text_label-JfeBn4 {
+  color: var(--cgray-systemcgary900);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.xl .frame-2836-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .text_label-RVpktd {
+  color: var(--cgray-systemcgary900);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.xl .frame-2841-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .text_label-KIz1tK {
+  color: var(--cgray-systemcgary900);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.xl .frame-2837-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: -8.00px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .x-qd5D4U {
+  background-color: transparent;
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .frame-2842-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: -44.00px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .x5-Hv6gvF {
+  background-color: transparent;
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .frame-2838-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: -80.00px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .x6-VCgDE7 {
+  background-color: transparent;
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .frame-2843-oYJfos {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: -116.00px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .x7-9CXs2v {
+  background-color: transparent;
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .scroll-HnCDUo {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #fafafa;
+  border-bottom-style: none;
+  border-color: #eaeaea;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 15px;
+}
+
+.xl .scroll-YsTYWQ {
+  background-color: #00000066;
+  border-radius: 600px;
+  height: 78px;
+  margin-left: -6.50px;
+  margin-right: -6.50px;
+  position: relative;
+  width: 8px;
+}
+
+.xl .arrow_drop_down {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
+
+.xl .button-outline {
+  background-color: transparent;
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 10px 16px;
+  position: relative;
+}
+
+.xl .cursors {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+
+.xl .frame-427318201 {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px solid;
+  border-color: var(--cgray-systemcgray300);
+  border-radius: 16px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427318202 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427319285 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.xl .frame-427319288 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.xl .frame-427319316 {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 6px;
+  height: 223px;
+  position: relative;
+  width: 185px;
+}
+
+.xl .frame-427319482 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427319664 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.xl .frame-427319673 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.xl .frame-427319678 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 379px;
+}
+
+.xl .frame-427319679 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 378px;
+}
+
+.xl .frame-427319680 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.xl .frame-427319750 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427319768 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+
+.xl .frame-427319769 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.xl .frame-427319773 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.xl .gnb1depth {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  padding: 0px 12px;
+  position: relative;
+}
+
+.xl .label-state {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 500px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.xl .refresh {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
+
+.xl .text {
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .text-label {
+  background-color: transparent;
+  color: var(--cgray-systempure);
+  font-style: normal;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+}
+
+.xl .text_label {
+  background-color: transparent;
+  font-style: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.xl .x1depth {
+  background-color: transparent;
+  position: relative;
+}
+
+.xl .x26 {
+  background-color: transparent;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
