@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".label-state-xffVNX").click(function() {
+                $(".label-state-WMMTQx select").val("1");
+            });
+            
+            $(".button-outline-KLCg4N").click(function() {
+                alert("준비중입니다.");
+            });
+
+            $(".button-outline-zY9ZBu").click(function() {
+                $(".container-center-horizontal").fadeOut(200);
+            });
+
+
+            // $.ajax({
+            //     url: 'https://port-0-pug-server-lzz1wm3g6f37aebe.sel4.cloudtype.app/api/matches',
+            //     method: 'GET',
+            //     dataType : "json",
+            //     success: function (data, status, xhr) {
+            //         console.log(data);
+            //     },
+            //     error: function (data, status, err) {
+            //     },
+            //     complete: function () {
+            //     }
+            // });
+            
+            var jsonArray = new Array();
+
+            var json1 = new Object();
+            json1.matchId = 1;
+            json1.userId = 1;
+            json1.nickName = "test1";
+            json1.birthYear = 1990;
+            json1.gender = 2;
+            json1.profileImageUrl = "https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316.svg";
+            json1.game = "League of Legends";
+            json1.tier = "Iron";
+            jsonArray.push(json1);
+
+            var json2 = new Object();
+            json2.matchId = 2;
+            json2.userId = 2;
+            json2.nickName = "test2";
+            json2.birthYear = 1998;
+            json2.gender = 2;
+            json2.profileImageUrl = "https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/frame-427319316-1.svg";
+            json2.game = "League of Legends";
+            json2.tier = "Bronze";
+            jsonArray.push(json2);
+
+            console.log(jsonArray.length);
+
+            var innerHtml = "";
+
+            for (var i = 0; i < jsonArray.length; i++) {
+
+            }
+
+        });
+    </script>
+    <title>PLAY-UR-GAME</title>
+</head>
+<body style="margin: 0;background: #f2f3f7;">
+    <div class="container-center-horizontal">
+        <div class="xl screen">
+            <div class="gnb-KvGp54">
+                <div class="logo-area-NQ5Gx7">
+                    <h1 class="title-6C19U2 valign-text-bottom">PUG</h1>
+                </div>
+                <div class="x1depth-NQ5Gx7 x1depth">
+                    <article class="gnb1depth">
+                        <div class="x1depth-ifs3ju x1depth semiboldsh5">게임매칭</div>
+                    </article>
+                    <article class="gnb1depth">
+                        <div class="x1depth-cr9q6Q x1depth semiboldsh5">대화</div>
+                    </article>
+                </div>
+                <div class="frame-427319775-NQ5Gx7">
+                    <div class="button-outline-zY9ZBu button-outline">
+                        <div class="text-label-Doi5Nc valign-text-middle text-label semiboldsh5">로그인
+                        </div>
+                    </div>
+                </div>
+                <div class="event-count-NQ5Gx7">
+                    <div class="x3-xBBPxD mediumparagraph6">3</div>
+                </div>
+            </div>
+            <div class="container-margin-KvGp54">
+                <div class="frame-427319774-Y6NWR5">
+                    <div class="text_label-YQIRdI text_label boldh1">매칭 리스트</div>
+                </div>
+                <div class="frame-1261156993-Y6NWR5">
+                    <div class="frame-427319755-e2cFD2">
+                        <div class="label-state-xffVNX label-state">
+                            <div class="refresh-BvRE2i refresh">
+                                <img class="refresh-G9fVUa refresh"
+                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                     anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66c98919c727924df90cf0d9/img/refresh.svg"
+                                     alt="Refresh">
+                            </div>
+                            <div class="text-BvRE2i text mediumparagraph5">초기화</div>
+                        </div>
+                        <div class="label-state-WMMTQx label-state">
+                            <select style="border: 0px;">
+                                <option value="1">리그오브레전드</option>
+                                <option value="2">롤토체스</option>
+                                <option value="3">오버워치</option>
+                                <option value="4">배틀그라운드</option>
+                                <option value="5">보이스톡(대화)</option>
+                                <option value="6">5시간</option>
+                                <option value="7">6시간</option>
+                                <option value="8">7시간</option>
+                            </select>
+                        </div>
+                        <div class="label-state-OMNLQM label-state" data-id="175:4001">
+                            <select style="border: 0px;">
+                                <option value="1">친구 매칭(즐겜)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="frame-427319773">
+                        <div class="frame-427319771-zVIbnC">
+                            <div class="frame-427319769">
+                                <div class="frame-427319678">
+                                    <div class="frame-427319482">
+                                        <div class="frame-427318201-kYjSKX frame-427318201">
+                                            <div class="frame-427318202-peIQyj frame-427318202">
+                                                <div class="frame-427319316-HtnN41 frame-427319316">
+                                                </div>
+                                                <div class="frame-427319768">
+                                                    <div class="frame-427319750">
+                                                        <div class="frame-1261156991-ZwemIx">
+                                                            <div class="text_label-epnssk text_label semiboldsh3">test1</div>
+                                                        </div>
+                                                        <div class="x26-epnssk x26 regularparagraphr5">26, 여성</div>
+                                                        <div class="frame-427319664">
+                                                            <div class="frame-427319285">
+                                                                <div class="text_label-lzhaV7 text_label mediumparagraph5">리그오브레전드</div>
+                                                            </div>
+                                                            <div class="frame-427319673">
+                                                                <div class="frame-427319288">
+                                                                    <div class="text_label-xftWoe text_label mediumparagraph5">실버</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-outline-KLCg4N button-outline">
+                                                        <div class="text-label-Kg47fn valign-text-middle text-label semiboldsh5">듀오 신청</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frame-1261156975-hylx4C" style="display: none;">
+                <div class="frame-2763-6BsP8Q" data-id="157:3073">
+                    <div class="frame-427319777-vfhOgx" data-id="157:5645"><img class="close-TC8qce" data-id="161:5804"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                            anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66cb099f12fafcc351a9065f/img/close.svg"
+                            alt="close"></div>
+                    <div class="frame-427319778-vfhOgx" data-id="157:5646">
+                        <div class="frame-2740-BIrxHd" data-id="157:3074">
+                            <div class="frame-427319763-gdNYZd" data-id="157:5583">
+                                <div class="text_label-grYxix valign-text-bottom text_label semiboldsh4"
+                                    data-id="157:5584">게임 듀오 찾기 서비스</div>
+                                <h1 class="title-grYxix valign-text-bottom" data-id="157:5585">PUG</h1>
+                            </div>
+                        </div>
+                        <div class="frame-427319776-BIrxHd" data-id="157:5586">
+                            <div class="frame-427319154-EFxiGQ" data-id="157:5538">
+                                <div class="ka-kao-login-2dyE8R ka-kao-login" data-id="157:5539"><img
+                                        class="image-flRKqu image" data-id="I157:5539;1297:29674"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                        anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66cb099f12fafcc351a9065f/img/------.svg"
+                                        alt="image">
+                                    <div class="text_label-flRKqu valign-text-bottom text_label"
+                                        data-id="I157:5539;1297:29675">카카오톡으로 로그인</div>
+                                </div>
+                            </div>
+                            <div class="frame-427319755-EFxiGQ" data-id="232:2657">
+                                <div class="ka-kao-login-jdeG1P ka-kao-login" data-id="232:2826"><img
+                                        class="image-7iZoZK image" data-id="232:2830"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                        anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66cb099f12fafcc351a9065f/img/-------1.svg"
+                                        alt="image">
+                                    <div class="text_label-7iZoZK valign-text-bottom text_label" data-id="232:2828">네이버
+                                        로그인</div>
+                                </div>
+                            </div>
+                            <div class="frame-427319754-EFxiGQ frame-427319754" data-id="157:5548">
+                                <div class="frame-2731-pRsx0m" data-id="157:5544">
+                                    <div class="frame-2727-NklIU7" data-id="157:5545"><img class="image-14-eCOx2P"
+                                            data-id="157:5546"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                            anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/66cb099f12fafcc351a9065f/img/image-14.png"
+                                            alt="image 14">
+                                        <div class="google-eCOx2P mediumparagraph4" data-id="157:5547">Google 계정으로 로그인
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
