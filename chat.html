@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/10/2024 07:43:19 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1536, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/5f06a5517739f30d3a8fc967/fonts/pretendard-bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6122f3f935181493bb5c6c35/fonts/pretendard-semibold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/66d7c29223ea06abf5a042ec/fonts/pretendard-regular.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/652c3450456268e27eebc9fd/fonts/gothica1-bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6207938bad4cbb51c8d150e8/fonts/pretendard-black.ttf') format("truetype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66c98906fe52b1b58b395ea5.66c98907fe52b1b58b395ea8.liyZghm.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --backgroundbackground-100: #eeeeee;
+  --backgroundbackground-50: #ffffff;
+  --black: #000000;
+  --cgray-systemcgary900: #1f2128;
+  --cgray-systemcgray100: #f2f3f7;
+  --cgray-systemcgray200: #e7e8ee;
+  --cgray-systemcgray50: #f7f8f9;
+  --cgray-systemcgray500: #afb2c0;
+  --cgray-systemcgray600: #8a8d9e;
+  --cgray-systemcgray700: #5b5f70;
+  --cgray-systemcgray800: #31343f;
+  --cgray-systemgray200: #e7e8ee;
+  --cgray-systemgray800: #31343f;
+  --cgray-systempure: #ffffff;
+  --graycgray200: #e7e8ed;
+  --graygray200: #e7e8ee;
+  --graypure: #ffffff;
+  --on-darkondark-01: #ffffffe0;
+  --on-lightonlight-03: #00000061;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 14px;
+  --font-size-xl: 18px;
+  --font-size-xxl: 20px;
+  --font-size-xxxl: 24px;
+  --font-size-xxxxl: 28px;
+ 
+  --font-family-pretendard-black: "Pretendard-Black", Helvetica;
+  --font-family-pretendard-bold: "Pretendard-Bold", Helvetica;
+  --font-family-pretendard-medium: "Pretendard-Medium", Helvetica;
+  --font-family-pretendard-regular: "Pretendard-Regular", Helvetica;
+  --font-family-pretendard-semibold: "Pretendard-SemiBold", Helvetica;
+}
+.boldh1 {
+  font-family: var(--font-family-pretendard-bold);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.semiboldsh4 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.semiboldsh5 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph3 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph4 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph5 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph6 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.regularparagraphr6 {
+  font-family: var(--font-family-pretendard-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+:root {
+}
+
+
+/* screen - u4366u4450u4368u4469u4540 */
+
+.u4366u4450u4368u4469u4540 {
+  background-color: var(--cgray-systemcgray100);
+  height: 1368px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1536px;
+}
+
+.u4366u4450u4368u4469u4540 .container-margin-xxPPvp {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  left: 168px;
+  padding: 24px 16px 40px;
+  position: absolute;
+  top: 64px;
+  width: 1200px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319774-xTBjui {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-HwrWat {
+  color: var(--cgray-systemcgray800);
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-1261156988-xTBjui {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.u4366u4450u4368u4469u4540 .frame-1261156986-Uk0t5s {
+  align-items: flex-start;
+  background-color: var(--backgroundbackground-50);
+  border-radius: 12px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: 1188px;
+  overflow: hidden;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319337-0TXuQW {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  width: 375px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319761-FhRkAo {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319316-OgPFxn {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/frame-427319316.svg);
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338-OgPFxn {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-mmKxPV {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .x-mmKxPV {
+  color: var(--cgray-systemcgray700);
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319760-FhRkAo {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.u4366u4450u4368u4469u4540 .event-count-yVbsZz {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319576-0TXuQW {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  width: 375px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338-VBknvQ {
+  align-items: center;
+  gap: 10px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319316-mRExqS {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/frame-427319316-1.svg);
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338-mRExqS {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-fMl5Y4 {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-GQxFKr {
+  color: var(--cgray-systemcgray700);
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319760-VBknvQ {
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319577-0TXuQW {
+  align-items: center;
+  background-color: var(--cgray-systemcgray50);
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  width: 375px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338-9JWI3p {
+  align-items: center;
+  gap: 10px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319316-kixKc4 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/frame-427319316-2.svg);
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338-kixKc4 {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-mPEogX {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .x-mPEogX {
+  color: var(--cgray-systemcgray700);
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319760-9JWI3p {
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-1261156987-Uk0t5s {
+  align-items: flex-start;
+  background-color: var(--backgroundbackground-50);
+  border-radius: 12px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .group-channel_-channel_-default_-light-GIWmXS {
+  align-items: center;
+  background-color: var(--backgroundbackground-50);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 1188px;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 28px 0px;
+  position: relative;
+  width: 777px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319526-7klvdM {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.u4366u4450u4368u4469u4540 .date-separator-aqvxEN {
+  align-items: flex-start;
+  background-color: var(--cgray-systemcgray500);
+  border-radius: 30px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  overflow: hidden;
+  padding: 4px 10px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .wed-dec-21-EAxCTK {
+  background-color: transparent;
+  color: var(--backgroundbackground-50);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .admin-messages-group-channel-aqvxEN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+
+.u4366u4450u4368u4469u4540 .caption-2-jane-doe-joined-this-channnel-fxWVyg {
+  background-color: transparent;
+  color: var(--cgray-systemcgray600);
+  flex: 1;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.u4366u4450u4368u4469u4540 .bubble-QP4e3C {
+  background-color: var(--cgray-systemcgray100);
+}
+
+.u4366u4450u4368u4469u4540 .x-9txn1S {
+  color: var(--cgray-systemcgary900);
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .messages-group-channel-HmxEqs {
+  justify-content: flex-end;
+}
+
+.u4366u4450u4368u4469u4540 .time-stamp-VI5q9d {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 0px 2px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .messages-group-channel-items-JCbuOO {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .icon-done-all-GTxpvN {
+  background-color: transparent;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+
+.u4366u4450u4368u4469u4540 .text_label-GTxpvN {
+  color: var(--on-lightonlight-03);
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .bubble-VI5q9d {
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-color: transparent;
+}
+
+.u4366u4450u4368u4469u4540 .x-eNaOpp {
+  color: var(--on-darkondark-01);
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: -1.00px;
+}
+
+.u4366u4450u4368u4469u4540 .message-input-7klvdM {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--backgroundbackground-50);
+  border-bottom-style: none;
+  border-color: var(--cgray-systemcgray200);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  overflow: hidden;
+  padding: 28px 16px 0px 12px;
+  position: relative;
+  width: 100%;
+}
+
+.u4366u4450u4368u4469u4540 .image-7XI8Hm {
+  background-color: transparent;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+.u4366u4450u4368u4469u4540 .input-7XI8Hm {
+  align-items: center;
+  background-color: var(--backgroundbackground-100);
+  border-radius: 30px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  height: 48px;
+  overflow: hidden;
+  padding: 6px 16px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .enter-message-V8llr7 {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--on-lightonlight-03);
+  flex: 1;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+}
+
+.u4366u4450u4368u4469u4540 .gnb-xxPPvp {
+  align-items: center;
+  background-color: var(--backgroundbackground-50);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--graycgray200);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  justify-content: space-between;
+  left: -0px;
+  padding: 12px 0px;
+  position: absolute;
+  top: 0px;
+  width: 1536px;
+}
+
+.u4366u4450u4368u4469u4540 .logo-area-slDbin {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  padding: 0px 0px 0px 20px;
+  position: relative;
+  width: 100px;
+}
+
+.u4366u4450u4368u4469u4540 .title-pAkMEK {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-pretendard-black);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .x1depth-slDbin {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.u4366u4450u4368u4469u4540 .x1depth-8zZvjd {
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .x1depth-zjWbJC {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .right-info-slDbin {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 0px 20px 0px 16px;
+  position: relative;
+  width: 100px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-1261156976-93ofAc {
+  background-color: transparent;
+  border: 3px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(106.00000128149986, 112.000000923872, 247.00000047683716), rgb(61.00000016391277, 88.00000235438347, 209.00000274181366)) 1;
+  border-radius: 200px;
+  height: 38px;
+  margin-bottom: -3.00px;
+  margin-right: -3.00px;
+  margin-top: -3.00px;
+  position: relative;
+  width: 38.00253677368164px;
+}
+
+.u4366u4450u4368u4469u4540 .mui-avatar-C6qaDQ {
+  background-color: transparent;
+  height: 33px;
+  left: -0px;
+  position: absolute;
+  top: -0px;
+  width: 33px;
+}
+
+.u4366u4450u4368u4469u4540 .event-count-slDbin {
+  left: 827px;
+  position: absolute;
+  top: 14px;
+}
+
+.u4366u4450u4368u4469u4540 .bubble {
+  align-items: flex-end;
+  border-radius: 100px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .event-count {
+  align-items: center;
+  background-color: #eb343a;
+  border-radius: 500px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 2px 6px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319316 {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px solid;
+  border-color: var(--cgray-systemcgray200);
+  border-radius: 100px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+  width: 56px;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319338 {
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .frame-427319760 {
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 43px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .gnb1depth {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  padding: 0px 12px;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .messages-group-channel {
+  align-items: flex-end;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  overflow: hidden;
+  padding: 0px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.u4366u4450u4368u4469u4540 .text_label {
+  background-color: transparent;
+  font-style: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .x {
+  background-color: transparent;
+  font-style: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .x1 {
+  background-color: transparent;
+  color: var(--cgray-systemcgray700);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.u4366u4450u4368u4469u4540 .x1depth {
+  background-color: transparent;
+  position: relative;
+}
+
+.u4366u4450u4368u4469u4540 .x3 {
+  background-color: transparent;
+  color: var(--backgroundbackground-50);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+</style></head><body style="margin: 0;background: #f2f3f7;"><input type="hidden" id="anPageName" name="page" value="u4366u4450u4368u4469u4540"><div class="container-center-horizontal"><div class="u4366u4450u4368u4469u4540 screen " data-id="166:2779"><div class="container-margin-xxPPvp" data-id="166:2780"><div class="frame-427319774-xTBjui" data-id="166:2781"><div class="text_label-HwrWat text_label boldh1" data-id="166:2782">대화</div></div><div class="frame-1261156988-xTBjui" data-id="166:3013"><div class="frame-1261156986-Uk0t5s" data-id="166:2974"><div class="frame-427319337-0TXuQW" data-id="166:2517"><div class="frame-427319761-FhRkAo" data-id="166:2518"><div class="frame-427319316-OgPFxn frame-427319316" data-id="166:2519-66dab9f1-3c8b-4d6c-b157-fe8dfcebb9fa"></div><div class="frame-427319338-OgPFxn frame-427319338" data-id="166:2520"><div class="text_label-mmKxPV text_label semiboldsh4" data-id="166:2521">정지수</div><div class="x-mmKxPV x regularparagraphr6" data-id="166:2522">궁금하신거 편하게 물어보셔도 돼요~~</div></div></div><div class="frame-427319760-FhRkAo frame-427319760" data-id="166:2523"><div class="x1 regularparagraphr6" data-id="166:2524">1일전</div><div class="event-count-yVbsZz event-count" data-id="166:2525"><div class="x3 mediumparagraph6" data-id="166:2526">3</div></div></div></div><div class="frame-427319576-0TXuQW" data-id="166:2527"><div class="frame-427319338-VBknvQ frame-427319338" data-id="166:2528"><div class="frame-427319316-mRExqS frame-427319316" data-id="166:2529-63f2765f-0b80-4285-945d-c16222bb2edd"></div><div class="frame-427319338-mRExqS frame-427319338" data-id="166:2530"><div class="text_label-fMl5Y4 text_label semiboldsh4" data-id="166:2531">김하나</div><div class="text_label-GQxFKr text_label regularparagraphr6" data-id="166:2532">나랑 저나하까ㅎㅎㅎㅎ</div></div></div><div class="frame-427319760-VBknvQ frame-427319760" data-id="166:2533"><div class="x1 regularparagraphr6" data-id="166:2534">1일전</div></div></div><div class="frame-427319577-0TXuQW" data-id="166:3054"><div class="frame-427319338-9JWI3p frame-427319338" data-id="166:3055"><div class="frame-427319316-kixKc4 frame-427319316" data-id="166:3056-cdd8524f-d843-4b5d-8374-8a65280f5c3d"></div><div class="frame-427319338-kixKc4 frame-427319338" data-id="166:3057"><div class="text_label-mPEogX text_label semiboldsh4" data-id="166:3058">팀퍼그</div><div class="x-mPEogX x regularparagraphr6" data-id="166:3059">안녕하세요!</div></div></div><div class="frame-427319760-9JWI3p frame-427319760" data-id="166:3060"><div class="x1 regularparagraphr6" data-id="166:3061">1일전</div></div></div></div><div class="frame-1261156987-Uk0t5s" data-id="166:2994"><div class="group-channel_-channel_-default_-light-GIWmXS" data-id="166:3014"><div class="frame-427319526-7klvdM" data-id="166:3015"><div class="date-separator-aqvxEN" data-id="166:3016"><div class="wed-dec-21-EAxCTK mediumparagraph5" data-id="I166:3016;199:177">2023년 8월 5일</div></div><div class="admin-messages-group-channel-aqvxEN" data-id="166:3017"><div class="caption-2-jane-doe-joined-this-channnel-fxWVyg mediumparagraph4" data-id="I166:3017;216:763">김퍼그님이 채널에 참가하셨습니다.</div></div></div><div class="messages-group-channel" data-id="166:3018"><div class="bubble-QP4e3C bubble" data-id="166:3021"><div class="x-9txn1S x mediumparagraph3" data-id="166:3022">안녕하세요! 팀 퍼그입니다.</div></div></div><div class="messages-group-channel-HmxEqs messages-group-channel" data-id="355:2671"><div class="time-stamp-VI5q9d" data-id="355:2672"><div class="messages-group-channel-items-JCbuOO" data-id="355:2673"><img class="icon-done-all-GTxpvN" data-id="355:2674" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/icon-done-all.svg" alt="icon-done-all"><div class="text_label-GTxpvN text_label mediumparagraph6" data-id="355:2675">읽음</div></div></div><div class="bubble-VI5q9d bubble" data-id="355:2676"><div class="x-eNaOpp x mediumparagraph3" data-id="355:2677">안녕하세요!</div></div></div><div class="message-input-7klvdM" data-id="166:3023"><img class="image-7XI8Hm" data-id="166:3024" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/image.svg" alt="Image"><div class="input-7XI8Hm" data-id="166:3027"><div class="enter-message-V8llr7 valign-text-middle mediumparagraph4" data-id="166:3028">Enter message</div></div></div></div></div></div></div><div class="gnb-xxPPvp" data-id="166:2899"><div class="logo-area-slDbin" data-id="166:2900"><h1 class="title-pAkMEK valign-text-bottom" data-id="166:2904">PUG</h1></div><div class="x1depth-slDbin x1depth" data-id="166:2905"><article class="gnb1depth" data-id="166:2906"><div class="x1depth-8zZvjd x1depth semiboldsh5" data-id="I166:2906;82:903">게임매칭</div></article><article class="gnb1depth" data-id="166:2907"><div class="x1depth-zjWbJC x1depth semiboldsh5" data-id="I166:2907;82:903">대화</div></article></div><div class="right-info-slDbin" data-id="166:2908"><div class="frame-1261156976-93ofAc" data-id="166:2909"><img class="mui-avatar-C6qaDQ" data-id="166:2910" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/67023f9548936d701cc9f585/img/mui-avatar.svg" alt="mui-avatar"></div></div><div class="event-count-slDbin event-count" data-id="166:2911"><div class="x3 mediumparagraph6" data-id="166:2912">3</div></div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
