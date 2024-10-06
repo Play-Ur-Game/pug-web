@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/10/2024 07:47:54 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1536, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:400");
+
+
+@font-face {
+  font-family: "Pretendard-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6207938bad4cbb51c8d150e8/fonts/pretendard-black.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6122f3f935181493bb5c6c35/fonts/pretendard-semibold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/652c3450456268e27eebc9fd/fonts/gothica1-bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/5f06a5517739f30d3a8fc967/fonts/pretendard-bold.otf') format("opentype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66c98906fe52b1b58b395ea5.66c98907fe52b1b58b395ea8.liyZghm.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --cgray-systemcgary900: #1f2128;
+  --cgray-systemcgray100: #f2f3f7;
+  --cgray-systemcgray300: #d6d7e1;
+  --cgray-systemcgray400: #c4c7d4;
+  --cgray-systemcgray500: #afb2c0;
+  --cgray-systemcgray700: #5b5f70;
+  --cgray-systemcgray800: #31343f;
+  --cgray-systemgray800: #31343f;
+  --cgray-systempure: #ffffff;
+  --graycgray100: #f2f3f6;
+  --graycgray200: #e7e8ed;
+  --graycgray900: #1f2128;
+  --graygray300: #d6d7e1;
+  --graygray500: #afb2c0;
+  --graygray700: #5b5f70;
+  --graypure: #ffffff;
+  --manatee: #8a8fa7;
+  --primary100: #f2f3ff;
+  --tan-hide: #f5935c;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 28px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-pretendard-black: "Pretendard-Black", Helvetica;
+  --font-family-pretendard-bold: "Pretendard-Bold", Helvetica;
+  --font-family-pretendard-medium: "Pretendard-Medium", Helvetica;
+  --font-family-pretendard-semibold: "Pretendard-SemiBold", Helvetica;
+}
+.boldh1 {
+  font-family: var(--font-family-pretendard-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.semiboldsh4 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.semiboldsh5 {
+  font-family: var(--font-family-pretendard-semibold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph5 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.mediumparagraph6 {
+  font-family: var(--font-family-pretendard-medium);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.inter-normal-manatee-16px {
+  color: var(--manatee);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 */
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 {
+  background-color: var(--cgray-systemcgray100);
+  height: 1246px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1536px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .gnb-v0qGh7 {
+  align-items: center;
+  background-color: var(--cgray-systempure);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--graycgray200);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  display: flex;
+  justify-content: space-between;
+  left: -0px;
+  padding: 12px 0px;
+  position: absolute;
+  top: 0px;
+  width: 1536px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .logo-area-uCvtVN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  padding: 0px 0px 0px 20px;
+  position: relative;
+  width: 100px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .title-CuOVj3 {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-pretendard-black);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x1depth-uCvtVN {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x1depth-AV4wei {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  text-fill-color: transparent;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x1depth-V64pRB {
+  color: var(--cgray-systemcgary900);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: -1.00px;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .right-info-uCvtVN {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 0px 20px 0px 16px;
+  position: relative;
+  width: 100px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .mui-avatar-VOWjFK {
+  background-color: var(--graycgray100);
+  border: 1px solid;
+  border-color: var(--graycgray200);
+  border-radius: 500px;
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  width: 32px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .unsplash3-t-ll_97-hn-jo-aOTSG3 {
+  background-color: transparent;
+  height: 32px;
+  left: -0px;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .event-count-uCvtVN {
+  align-items: center;
+  background-color: #eb343a;
+  border-radius: 500px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  left: 827px;
+  padding: 2px 6px;
+  position: absolute;
+  top: 14px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x3-SUYGF1 {
+  background-color: transparent;
+  color: var(--cgray-systempure);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .container-margin-v0qGh7 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 168px;
+  padding: 24px 16px 40px;
+  position: absolute;
+  top: 64px;
+  width: 1200px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319774-nnDw1p {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-cFcbjf {
+  color: var(--cgray-systemcgray800);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-1261156999-nnDw1p {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319755-NFZbgP {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .label-state-9n1VB2 {
+  background-color: var(--cgray-systempure);
+  border-color: var(--cgray-systemcgray400);
+  padding: 10px 18px 10px 12px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .refresh-y0723e {
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .refresh-SzpFDS {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text-y0723e {
+  color: var(--cgray-systemcgray700);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .label-state-me5b8N {
+  background-color: var(--primary100);
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(106.00000128149986, 112.000000923872, 247.00000047683716), rgb(61.00000016391277, 88.00000235438347, 209.00000274181366)) 1;
+  padding: 10px 12px 10px 18px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text-XsYxZd {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .arrow_drop_down-XsYxZd {
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .arrow_drop_down-xduQ30 {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .label-state-x4uaNT {
+  background-color: var(--primary100);
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(106.00000128149986, 112.000000923872, 247.00000047683716), rgb(61.00000016391277, 88.00000235438347, 209.00000274181366)) 1;
+  padding: 10px 12px 10px 18px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text-pVSd07 {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .arrow_drop_down-pVSd07 {
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .arrow_drop_down-vxxIBm {
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319771-VinjmH {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319769-UbM9NL {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319769-sWFOQf {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319769.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 6px;
+  height: 223px;
+  width: 185px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-F0lioJ {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-AxllHs {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-UsvQX3 {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-lVI0pw {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-7HUvGy {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-eb9KDG {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-WT4UzG {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-xvVALu {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-1.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-afNXyy {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-k34lbT {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-zRBLHm {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319150-QAUSsp {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 101px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319772-VinjmH {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 16px 0px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319769-Dxq6Oa {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-UkKGNM {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-2.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-C6JLmF {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-gA59R4 {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-ZW7eVY {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-3MWCa5 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-3.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-7khjgl {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-xF6wwh {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-E1L2LD {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-Oj2vSa {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-4.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-JfkcIb {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-4uws5J {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-omgs9r {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319773-VinjmH {
+  padding: 16px 0px 0px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319769-YE2VPi {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-68dZhH {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-5.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-gcJkyM {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-nG9KCl {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-CXmuEx {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-yz5i67 {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-6.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-20SfO1 {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-g87F8B {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-akjMaa {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316-MPY1yu {
+  background-image: url(https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/frame-427319316-7.svg);
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-xAiWEC {
+  color: var(--cgray-systemcgray800);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-Fx9DqV {
+  color: var(--cgray-systemcgray500);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label-yiJof3 {
+  color: var(--cgray-systemcgray700);
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .arrow_drop_down {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .button-outline {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(106.00000128149986, 112.000000923872, 247.00000047683716) 0%, rgb(61.00000016391277, 88.00000235438347, 209.00000274181366) 100%);
+  background-color: transparent;
+  border-radius: 100px;
+  display: flex;
+  gap: 4px;
+  height: 40px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 16px;
+  position: relative;
+  width: 101px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427318201 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--tan-hide);
+  border: 1px solid;
+  border-color: var(--cgray-systemcgray300);
+  border-radius: 16px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427318202 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--cgray-systempure);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319285 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319288 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319316 {
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 6px;
+  height: 223px;
+  position: relative;
+  width: 185px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319482 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319664 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319673 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319678 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 379px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319679 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 378px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319680 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319750 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319768 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319769 {
+  background-color: transparent;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .frame-427319773 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .gnb1depth {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  padding: 0px 12px;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .label-state {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 500px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .refresh {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text {
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text-label {
+  background-color: transparent;
+  color: var(--cgray-systempure);
+  flex: 1;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .text_label {
+  background-color: transparent;
+  font-style: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x1depth {
+  background-color: transparent;
+  position: relative;
+}
+
+.u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 .x26 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+</style></head><body style="margin: 0;background: #f2f3f7;"><input type="hidden" id="anPageName" name="page" value="u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461"><div class="container-center-horizontal"><div class="u4361u4457u4361u4455u4527-u4357u4457u4352u4467u4363u4469u4523-u4363u4458u4523u4357u4461 screen " data-id="156:2090"><div class="gnb-v0qGh7" data-id="156:2091"><div class="logo-area-uCvtVN" data-id="156:2092"><h1 class="title-CuOVj3 valign-text-bottom" data-id="156:2096">PUG</h1></div><div class="x1depth-uCvtVN x1depth" data-id="156:2097"><article class="gnb1depth" data-id="156:2098"><div class="x1depth-AV4wei x1depth semiboldsh5" data-id="I156:2098;82:903">게임매칭</div></article><article class="gnb1depth" data-id="156:2099"><div class="x1depth-V64pRB x1depth semiboldsh5" data-id="I156:2099;82:903">대화</div></article></div><div class="right-info-uCvtVN" data-id="156:2100"><div class="mui-avatar-VOWjFK" data-id="156:2101"><img class="unsplash3-t-ll_97-hn-jo-aOTSG3" data-id="I156:2101;613:20393" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/unsplash-3tll-97hnjo@2x.png" alt="unsplash:3TLl_97HNJo"></div></div><div class="event-count-uCvtVN" data-id="156:2102"><div class="x3-SUYGF1 mediumparagraph6" data-id="156:2103">3</div></div></div><div class="container-margin-v0qGh7" data-id="156:2104"><div class="frame-427319774-nnDw1p" data-id="156:2105"><div class="text_label-cFcbjf text_label boldh1" data-id="156:2106">매칭 리스트</div></div><div class="frame-1261156999-nnDw1p" data-id="203:3509"><div class="frame-427319755-NFZbgP" data-id="203:3485"><div class="label-state-9n1VB2 label-state" data-id="203:3486"><div class="refresh-y0723e refresh" data-id="203:3487"><img class="refresh-SzpFDS refresh" data-id="I203:3487;152:4582" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/refresh.svg" alt="Refresh"></div><div class="text-y0723e text mediumparagraph5" data-id="203:3488">초기화</div></div><div class="label-state-me5b8N label-state" data-id="203:3490"><div class="text-XsYxZd text mediumparagraph5" data-id="203:3491">리그오브레전드</div><div class="arrow_drop_down-XsYxZd arrow_drop_down" data-id="203:3492"><img class="arrow_drop_down-xduQ30 arrow_drop_down" data-id="I203:3492;151:47060" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/arrow-drop-down.svg" alt="arrow_drop_down"></div></div><div class="label-state-x4uaNT label-state" data-id="203:3494"><div class="text-pVSd07 text mediumparagraph5" data-id="203:3495">친구 매칭(즐겜)</div><div class="arrow_drop_down-pVSd07 arrow_drop_down" data-id="203:3496"><img class="arrow_drop_down-vxxIBm arrow_drop_down" data-id="I203:3496;151:47060" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66c98908fe52b1b58b395eaa/releases/670240a7dc802ea00c2f2230/img/arrow-drop-down-1.svg" alt="arrow_drop_down"></div></div></div><div class="frame-427319773" data-id="156:2116"><div class="frame-427319771-VinjmH" data-id="156:2117"><div class="frame-427319769-UbM9NL frame-427319769" data-id="156:2118"><div class="frame-427319678" data-id="156:2119"><div class="frame-427319482" data-id="156:2120"><div class="frame-427318201" data-id="156:2121"><div class="frame-427318202" data-id="156:2122"><div class="frame-427319769-sWFOQf frame-427319769" data-id="201:2726-20c4131a-f7f2-4d08-ab4f-fdb9db15dd66"></div><div class="frame-427319768" data-id="156:2124"><div class="frame-427319750" data-id="156:2125"><div class="text_label-F0lioJ text_label semiboldsh4" data-id="156:2126">정지수</div><div class="x26 inter-normal-manatee-16px" data-id="156:2127">26, 여성</div><div class="frame-427319664" data-id="156:2128"><div class="frame-427319285" data-id="156:2129"><div class="text_label-AxllHs text_label mediumparagraph5" data-id="156:2130">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2131"><div class="frame-427319288" data-id="156:2132"><div class="text_label-UsvQX3 text_label semiboldsh5" data-id="156:2133">실버</div></div></div></div></div><div class="button-outline" data-id="156:2134"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2135">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319679" data-id="156:2137"><div class="frame-427319482" data-id="156:2138"><div class="frame-427318201" data-id="156:2139"><div class="frame-427318202" data-id="156:2140"><div class="frame-427319316-lVI0pw frame-427319316" data-id="156:2141-b5482516-6c49-4c62-b44f-5f584425d02d"></div><div class="frame-427319768" data-id="156:2142"><div class="frame-427319750" data-id="156:2143"><div class="text_label-7HUvGy text_label semiboldsh4" data-id="156:2144">김나현</div><div class="x26 inter-normal-manatee-16px" data-id="156:2145">26, 여성</div><div class="frame-427319664" data-id="156:2146"><div class="frame-427319285" data-id="156:2147"><div class="text_label-eb9KDG text_label mediumparagraph5" data-id="156:2148">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2149"><div class="frame-427319288" data-id="156:2150"><div class="text_label-WT4UzG text_label semiboldsh5" data-id="156:2151">실버</div></div></div></div></div><div class="button-outline" data-id="156:2152"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2153">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319680" data-id="156:2155"><div class="frame-427319482" data-id="156:2156"><div class="frame-427318201" data-id="156:2157"><div class="frame-427318202" data-id="156:2158"><div class="frame-427319316-xvVALu frame-427319316" data-id="156:2159-1dab3526-fa43-4600-8e63-ff71f00f9a39"></div><div class="frame-427319768" data-id="156:2160"><div class="frame-427319750" data-id="156:2161"><div class="text_label-afNXyy text_label semiboldsh4" data-id="156:2162">김지현</div><div class="x26 inter-normal-manatee-16px" data-id="156:2163">26, 여성</div><div class="frame-427319664" data-id="156:2164"><div class="frame-427319285" data-id="156:2165"><div class="text_label-k34lbT text_label mediumparagraph5" data-id="156:2166">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2167"><div class="frame-427319288" data-id="156:2168"><div class="text_label-zRBLHm text_label semiboldsh5" data-id="156:2169">실버</div></div></div></div></div><div class="frame-427319150-QAUSsp" data-id="156:2170"><div class="button-outline" data-id="156:2171"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2172">듀오 신청</div></div></div></div></div></div></div></div></div></div><div class="frame-427319772-VinjmH" data-id="156:2174"><div class="frame-427319769-Dxq6Oa frame-427319769" data-id="156:2175"><div class="frame-427319678" data-id="156:2176"><div class="frame-427319482" data-id="156:2177"><div class="frame-427318201" data-id="156:2178"><div class="frame-427318202" data-id="156:2179"><div class="frame-427319316-UkKGNM frame-427319316" data-id="156:2180-f9ee599d-847c-482b-bcd1-338b52967538"></div><div class="frame-427319768" data-id="156:2181"><div class="frame-427319750" data-id="156:2182"><div class="text_label-C6JLmF text_label semiboldsh4" data-id="156:2183">김지은</div><div class="x26 inter-normal-manatee-16px" data-id="156:2184">26, 여성</div><div class="frame-427319664" data-id="156:2185"><div class="frame-427319285" data-id="156:2186"><div class="text_label-gA59R4 text_label mediumparagraph5" data-id="156:2187">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2188"><div class="frame-427319288" data-id="156:2189"><div class="text_label-ZW7eVY text_label semiboldsh5" data-id="156:2190">실버</div></div></div></div></div><div class="button-outline" data-id="156:2191"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2192">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319679" data-id="156:2194"><div class="frame-427319482" data-id="156:2195"><div class="frame-427318201" data-id="156:2196"><div class="frame-427318202" data-id="156:2197"><div class="frame-427319316-3MWCa5 frame-427319316" data-id="156:2198-ffa3ca60-ba3a-4e7e-b240-95f3552dfdd9"></div><div class="frame-427319768" data-id="156:2199"><div class="frame-427319750" data-id="156:2200"><div class="text_label-7khjgl text_label semiboldsh4" data-id="156:2201">장지은</div><div class="x26 inter-normal-manatee-16px" data-id="156:2202">26, 여성</div><div class="frame-427319664" data-id="156:2203"><div class="frame-427319285" data-id="156:2204"><div class="text_label-xF6wwh text_label mediumparagraph5" data-id="156:2205">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2206"><div class="frame-427319288" data-id="156:2207"><div class="text_label-E1L2LD text_label semiboldsh5" data-id="156:2208">실버</div></div></div></div></div><div class="button-outline" data-id="156:2209"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2210">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319680" data-id="156:2212"><div class="frame-427319482" data-id="156:2213"><div class="frame-427318201" data-id="156:2214"><div class="frame-427318202" data-id="156:2215"><div class="frame-427319316-Oj2vSa frame-427319316" data-id="156:2216-58b04e02-d146-4ed5-95a5-0672cd93e7df"></div><div class="frame-427319768" data-id="156:2217"><div class="frame-427319750" data-id="156:2218"><div class="text_label-JfkcIb text_label semiboldsh4" data-id="156:2219">강서현</div><div class="x26 inter-normal-manatee-16px" data-id="156:2220">26, 여성</div><div class="frame-427319664" data-id="156:2221"><div class="frame-427319285" data-id="156:2222"><div class="text_label-4uws5J text_label mediumparagraph5" data-id="156:2223">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2224"><div class="frame-427319288" data-id="156:2225"><div class="text_label-omgs9r text_label semiboldsh5" data-id="156:2226">실버</div></div></div></div></div><div class="button-outline" data-id="156:2227"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2228">듀오 신청</div></div></div></div></div></div></div></div></div><div class="frame-427319773-VinjmH frame-427319773" data-id="156:2230"><div class="frame-427319769-YE2VPi frame-427319769" data-id="156:2231"><div class="frame-427319678" data-id="156:2232"><div class="frame-427319482" data-id="156:2233"><div class="frame-427318201" data-id="156:2234"><div class="frame-427318202" data-id="156:2235"><div class="frame-427319316-68dZhH frame-427319316" data-id="156:2236-fb148b36-92c5-4171-afaf-93d3dda57e61"></div><div class="frame-427319768" data-id="156:2237"><div class="frame-427319750" data-id="156:2238"><div class="text_label-gcJkyM text_label semiboldsh4" data-id="156:2239">하연수</div><div class="x26 inter-normal-manatee-16px" data-id="156:2240">26, 여성</div><div class="frame-427319664" data-id="156:2241"><div class="frame-427319285" data-id="156:2242"><div class="text_label-nG9KCl text_label mediumparagraph5" data-id="156:2243">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2244"><div class="frame-427319288" data-id="156:2245"><div class="text_label-CXmuEx text_label semiboldsh5" data-id="156:2246">실버</div></div></div></div></div><div class="button-outline" data-id="156:2247"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2248">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319679" data-id="156:2250"><div class="frame-427319482" data-id="156:2251"><div class="frame-427318201" data-id="156:2252"><div class="frame-427318202" data-id="156:2253"><div class="frame-427319316-yz5i67 frame-427319316" data-id="156:2254-367c284d-f893-434e-a4ad-1c6ba57eb21f"></div><div class="frame-427319768" data-id="156:2255"><div class="frame-427319750" data-id="156:2256"><div class="text_label-20SfO1 text_label semiboldsh4" data-id="156:2257">김봄율</div><div class="x26 inter-normal-manatee-16px" data-id="156:2258">26, 여성</div><div class="frame-427319664" data-id="156:2259"><div class="frame-427319285" data-id="156:2260"><div class="text_label-g87F8B text_label mediumparagraph5" data-id="156:2261">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2262"><div class="frame-427319288" data-id="156:2263"><div class="text_label-akjMaa text_label semiboldsh5" data-id="156:2264">실버</div></div></div></div></div><div class="button-outline" data-id="156:2265"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2266">듀오 신청</div></div></div></div></div></div></div><div class="frame-427319680" data-id="156:2268"><div class="frame-427319482" data-id="156:2269"><div class="frame-427318201" data-id="156:2270"><div class="frame-427318202" data-id="156:2271"><div class="frame-427319316-MPY1yu frame-427319316" data-id="156:2272-97869710-85db-49be-9aa2-d0f50853005b"></div><div class="frame-427319768" data-id="156:2273"><div class="frame-427319750" data-id="156:2274"><div class="text_label-xAiWEC text_label semiboldsh4" data-id="156:2275">성희은</div><div class="x26 inter-normal-manatee-16px" data-id="156:2276">26, 여성</div><div class="frame-427319664" data-id="156:2277"><div class="frame-427319285" data-id="156:2278"><div class="text_label-Fx9DqV text_label mediumparagraph5" data-id="156:2279">리그오브레전드</div></div><div class="frame-427319673" data-id="156:2280"><div class="frame-427319288" data-id="156:2281"><div class="text_label-yiJof3 text_label semiboldsh5" data-id="156:2282">실버</div></div></div></div></div><div class="button-outline" data-id="156:2283"><div class="text-label valign-text-middle semiboldsh5" data-id="156:2284">듀오 신청</div></div></div></div></div></div></div></div></div></div></div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
